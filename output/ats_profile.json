@@ -1,0 +1,248 @@
+{
+  "candidate_id": "b1066669-9b3e-466f-b52d-5c85d9609d1c",
+  "full_name": "John Doe",
+  "emails": [
+    "john.doe@example.com"
+  ],
+  "phones": [
+    "+91 9876543210"
+  ],
+  "location": {
+    "city": null,
+    "state": null,
+    "country": null,
+    "postal_code": null,
+    "raw": "Bangalore, India"
+  },
+  "headline": "Senior Software Engineer",
+  "years_experience": 6.0,
+  "skills": [
+    {
+      "name": "Python",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "ats"
+    },
+    {
+      "name": "React",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "ats"
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "ats"
+    },
+    {
+      "name": "Docker",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "ats"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Acme Corp",
+      "location": {
+        "city": null,
+        "state": null,
+        "country": null,
+        "postal_code": null,
+        "raw": "Bangalore"
+      },
+      "start_date": "2021-01-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Led backend development for core microservices.",
+      "skills_used": [
+        "Python",
+        "FastAPI",
+        "Docker"
+      ],
+      "source": "ats"
+    },
+    {
+      "title": "Software Engineer",
+      "company": "StartupXYZ",
+      "location": {
+        "city": null,
+        "state": null,
+        "country": null,
+        "postal_code": null,
+        "raw": "Remote"
+      },
+      "start_date": "2018-06-01",
+      "end_date": "2020-12-01",
+      "is_current": false,
+      "description": "Built REST APIs and maintained PostgreSQL databases.",
+      "skills_used": [
+        "Python",
+        "Django",
+        "PostgreSQL"
+      ],
+      "source": "ats"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Indian Institute of Technology",
+      "degree": "bachelor",
+      "field_of_study": "Computer Science",
+      "start_date": "2014-01-01",
+      "end_date": "2018-01-01",
+      "gpa": 8.7,
+      "is_completed": true,
+      "source": "ats"
+    }
+  ],
+  "links": [
+    "https://linkedin.com/in/johndoe",
+    "https://github.com/johndoe"
+  ],
+  "provenance": [
+    {
+      "field_path": "full_name",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "John Doe",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.106846Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "emails[0]",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "john.doe@example.com",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.108238Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "phones[0]",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "+91 9876543210",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.108245Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "headline",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "Senior Software Engineer",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.108248Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "years_experience",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "6.0",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.108252Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "location",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "Bangalore, India",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.108256Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "skills[0].name",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "Python",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.108262Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "skills[1].name",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "React",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.108265Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "skills[2].name",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "PostgreSQL",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.108267Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "skills[3].name",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "Docker",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.108269Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "links.linkedin",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "https://linkedin.com/in/johndoe",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.109411Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "links.github",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "https://github.com/johndoe",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.109420Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "experience[0]",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "{'title': 'Senior Software Engineer', 'company': 'Acme Corp', 'location': 'Bangalore', 'startDate': 'Jan 2021', 'endDate': 'Present', 'isCurrent': True, 'description': 'Led backend development for core microservices.', 'skillsUsed': ['Python', 'FastAPI', 'Docker']}",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.109447Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "experience[1]",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "{'title': 'Software Engineer', 'company': 'StartupXYZ', 'location': 'Remote', 'startDate': 'Jun 2018', 'endDate': 'Dec 2020', 'isCurrent': False, 'description': 'Built REST APIs and maintained PostgreSQL databases.', 'skillsUsed': ['Python', 'Django', 'PostgreSQL']}",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.109461Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "education[0]",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "{'institution': 'Indian Institute of Technology', 'degree': 'Bachelor of Technology', 'fieldOfStudy': 'Computer Science', 'startDate': '2014', 'endDate': '2018', 'gpa': 8.7}",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:15:59.109518Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    }
+  ],
+  "created_at": "2026-06-30T09:15:59.112512Z",
+  "updated_at": "2026-06-30T09:15:59.112513Z"
+}

@@ -1,0 +1,368 @@
+{
+  "candidate_id": "14ded99f-5a1c-4ea6-8386-fde98b79c63e",
+  "full_name": "Alice Wonderland",
+  "emails": [
+    "alice.wonderland@example.com"
+  ],
+  "phones": [
+    "+1 (415) 555-0199",
+    "(415) 555-0199"
+  ],
+  "location": null,
+  "headline": null,
+  "years_experience": null,
+  "skills": [
+    {
+      "name": "Python",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "JavaScript",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "TypeScript",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "React",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "Node.js",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "Django",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "FastAPI",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "Redis",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "Docker",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "AWS",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "Git",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    },
+    {
+      "name": "REST",
+      "level": "unknown",
+      "years_of_experience": null,
+      "last_used_year": null,
+      "source": "resume"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "TechCorp",
+      "location": null,
+      "start_date": "2021-01-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Built scalable microservices using Python and FastAPI.\nReduced API latency by 40% through caching with Redis.\nSoftware Engineer at WebStartup",
+      "skills_used": [],
+      "source": "resume"
+    },
+    {
+      "title": "Software Engineer",
+      "company": "WebStartup",
+      "location": null,
+      "start_date": "2018-06-01",
+      "end_date": "2020-12-01",
+      "is_current": false,
+      "description": "Developed React frontend and Django REST backend.\nManaged PostgreSQL databases and Docker deployments.",
+      "skills_used": [],
+      "source": "resume"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Indian Institute of Technology Bombay",
+      "degree": "bachelor",
+      "field_of_study": "of Technology in Computer Science",
+      "start_date": null,
+      "end_date": null,
+      "gpa": null,
+      "is_completed": true,
+      "source": "resume"
+    },
+    {
+      "institution": null,
+      "degree": "unknown",
+      "field_of_study": null,
+      "start_date": "2014-01-01",
+      "end_date": "2018-01-01",
+      "gpa": null,
+      "is_completed": true,
+      "source": "resume"
+    }
+  ],
+  "links": [
+    "https://linkedin.com/in/alicewonderland",
+    "https://github.com/alicewonder"
+  ],
+  "provenance": [
+    {
+      "field_path": "emails[0]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "alice.wonderland@example.com",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.200671Z",
+      "normalised": false,
+      "notes": "method=regex"
+    },
+    {
+      "field_path": "phones[0]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "+1 (415) 555-0199",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.200688Z",
+      "normalised": false,
+      "notes": "method=regex"
+    },
+    {
+      "field_path": "phones[1]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "(415) 555-0199",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.200691Z",
+      "normalised": false,
+      "notes": "method=regex"
+    },
+    {
+      "field_path": "full_name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Alice Wonderland",
+      "confidence": 0.65,
+      "extracted_at": "2026-06-30T09:15:59.200833Z",
+      "normalised": false,
+      "notes": "method=header_heuristic"
+    },
+    {
+      "field_path": "skills[0].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Python",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210884Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[1].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "JavaScript",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210892Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[2].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "TypeScript",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210895Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[3].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "React",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210897Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[4].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Node.js",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210899Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[5].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Django",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210901Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[6].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "FastAPI",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210903Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[7].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "PostgreSQL",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210905Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[8].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Redis",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210907Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[9].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Docker",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210909Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[10].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "AWS",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210911Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[11].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Git",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210912Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[12].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "REST",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210914Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "experience[0]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Senior Software Engineer",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210961Z",
+      "normalised": false,
+      "notes": "method=section_keyword"
+    },
+    {
+      "field_path": "experience[1]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Software Engineer",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.210964Z",
+      "normalised": false,
+      "notes": "method=section_keyword"
+    },
+    {
+      "field_path": "education[0]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Indian Institute of Technology Bombay",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.211015Z",
+      "normalised": false,
+      "notes": "method=section_keyword"
+    },
+    {
+      "field_path": "education[1]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": null,
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.211017Z",
+      "normalised": false,
+      "notes": "method=section_keyword"
+    },
+    {
+      "field_path": "links[0]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "https://linkedin.com/in/alicewonderland",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.211032Z",
+      "normalised": false,
+      "notes": "method=regex_linkedin"
+    },
+    {
+      "field_path": "links[1]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "https://github.com/alicewonder",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:15:59.211036Z",
+      "normalised": false,
+      "notes": "method=regex_github"
+    }
+  ],
+  "created_at": "2026-06-30T09:15:59.211142Z",
+  "updated_at": "2026-06-30T09:15:59.211143Z"
+}

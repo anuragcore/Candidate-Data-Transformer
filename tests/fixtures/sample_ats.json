@@ -1,0 +1,43 @@
+{
+  "candidateName": "John Doe",
+  "primaryEmail": "john.doe@example.com",
+  "mobile": "+91 9876543210",
+  "headline": "Senior Software Engineer",
+  "yearsExperience": 6,
+  "location": "Bangalore, India",
+  "linkedinUrl": "https://linkedin.com/in/johndoe",
+  "githubUrl": "https://github.com/johndoe",
+  "skills": ["Python", "React", "PostgreSQL", "Docker"],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Acme Corp",
+      "location": "Bangalore",
+      "startDate": "Jan 2021",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Led backend development for core microservices.",
+      "skillsUsed": ["Python", "FastAPI", "Docker"]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "StartupXYZ",
+      "location": "Remote",
+      "startDate": "Jun 2018",
+      "endDate": "Dec 2020",
+      "isCurrent": false,
+      "description": "Built REST APIs and maintained PostgreSQL databases.",
+      "skillsUsed": ["Python", "Django", "PostgreSQL"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Indian Institute of Technology",
+      "degree": "Bachelor of Technology",
+      "fieldOfStudy": "Computer Science",
+      "startDate": "2014",
+      "endDate": "2018",
+      "gpa": 8.7
+    }
+  ]
+}

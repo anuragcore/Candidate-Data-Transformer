@@ -1,0 +1,51 @@
+{
+  "name": "default_projection",
+  "version": "1.0.0",
+  "description": "Default candidate profile projection for Phase B demo",
+  "strip_null_fields": true,
+  "include_provenance": true,
+  "fields": [
+    {
+      "path": "id",
+      "from": "candidate_id"
+    },
+    {
+      "path": "personal.name",
+      "from": "full_name",
+      "required": true,
+      "on_missing": "null"
+    },
+    {
+      "path": "personal.primary_email",
+      "from": "emails[0]",
+      "on_missing": "omit"
+    },
+    {
+      "path": "personal.primary_phone",
+      "from": "phones[0]",
+      "on_missing": "omit"
+    },
+    {
+      "path": "professional.headline",
+      "from": "headline",
+      "on_missing": "omit"
+    },
+    {
+      "path": "professional.total_experience_years",
+      "from": "years_experience",
+      "on_missing": "omit"
+    },
+    {
+      "path": "skills",
+      "from": "skills"
+    },
+    {
+      "path": "experience",
+      "from": "experience"
+    },
+    {
+      "path": "education",
+      "from": "education"
+    }
+  ]
+}

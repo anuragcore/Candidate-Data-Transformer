@@ -1,0 +1,382 @@
+{
+  "id": "c75ecf75-a637-49fd-a527-cd65eb722933",
+  "personal": {
+    "name": "Alice Wonderland",
+    "primary_email": "john.doe@example.com",
+    "primary_phone": "+91 9876543210"
+  },
+  "professional": {
+    "headline": "Senior Software Engineer",
+    "total_experience_years": 6.0
+  },
+  "skills": [
+    "name='Python' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='merged'",
+    "name='React' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='merged'",
+    "name='PostgreSQL' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='merged'",
+    "name='Docker' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='merged'",
+    "name='JavaScript' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='resume'",
+    "name='TypeScript' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='resume'",
+    "name='Node.js' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='resume'",
+    "name='Django' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='resume'",
+    "name='FastAPI' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='resume'",
+    "name='Redis' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='resume'",
+    "name='AWS' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='resume'",
+    "name='Git' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='resume'",
+    "name='REST' level=<SkillLevel.UNKNOWN: 'unknown'> years_of_experience=None last_used_year=None source='resume'"
+  ],
+  "experience": [
+    "title='Senior Software Engineer' company='Acme Corp' location=Location(city=None, state=None, country=None, postal_code=None, raw='Bangalore') start_date=datetime.date(2021, 1, 1) end_date=None is_current=True description='Led backend development for core microservices.' skills_used=['Python', 'FastAPI', 'Docker'] source='ats'",
+    "title='Senior Software Engineer' company='TechCorp' location=None start_date=datetime.date(2021, 1, 1) end_date=None is_current=True description='Built scalable microservices using Python and FastAPI.\\nReduced API latency by 40% through caching with Redis.\\nSoftware Engineer at WebStartup' skills_used=[] source='resume'",
+    "title='Software Engineer' company='StartupXYZ' location=Location(city=None, state=None, country=None, postal_code=None, raw='Remote') start_date=datetime.date(2018, 6, 1) end_date=datetime.date(2020, 12, 1) is_current=False description='Built REST APIs and maintained PostgreSQL databases.' skills_used=['Python', 'Django', 'PostgreSQL'] source='ats'",
+    "title='Software Engineer' company='WebStartup' location=None start_date=datetime.date(2018, 6, 1) end_date=datetime.date(2020, 12, 1) is_current=False description='Developed React frontend and Django REST backend.\\nManaged PostgreSQL databases and Docker deployments.' skills_used=[] source='resume'"
+  ],
+  "education": [
+    "institution='Indian Institute of Technology' degree=<EducationDegree.BACHELOR: 'bachelor'> field_of_study='Computer Science' start_date=datetime.date(2014, 1, 1) end_date=datetime.date(2018, 1, 1) gpa=8.7 is_completed=True source='ats'",
+    "institution=None degree=<EducationDegree.UNKNOWN: 'unknown'> field_of_study=None start_date=datetime.date(2014, 1, 1) end_date=datetime.date(2018, 1, 1) gpa=None is_completed=True source='resume'",
+    "institution='Indian Institute of Technology Bombay' degree=<EducationDegree.BACHELOR: 'bachelor'> field_of_study='of Technology in Computer Science' start_date=None end_date=None gpa=None is_completed=True source='resume'"
+  ],
+  "provenance": [
+    {
+      "field_path": "full_name",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "John Doe",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.076622Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "emails[0]",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "john.doe@example.com",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.078179Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "phones[0]",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "+91 9876543210",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.078186Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "headline",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "Senior Software Engineer",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.078188Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "years_experience",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "6.0",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.078192Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "location",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "Bangalore, India",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.078196Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "skills[0].name",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "Python",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.078203Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "skills[1].name",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "React",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.078207Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "skills[2].name",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "PostgreSQL",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.078211Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "skills[3].name",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "Docker",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.078213Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "links.linkedin",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "https://linkedin.com/in/johndoe",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.079164Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "links.github",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "https://github.com/johndoe",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.079178Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "experience[0]",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "{'title': 'Senior Software Engineer', 'company': 'Acme Corp', 'location': 'Bangalore', 'startDate': 'Jan 2021', 'endDate': 'Present', 'isCurrent': True, 'description': 'Led backend development for core microservices.', 'skillsUsed': ['Python', 'FastAPI', 'Docker']}",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.079202Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "experience[1]",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "{'title': 'Software Engineer', 'company': 'StartupXYZ', 'location': 'Remote', 'startDate': 'Jun 2018', 'endDate': 'Dec 2020', 'isCurrent': False, 'description': 'Built REST APIs and maintained PostgreSQL databases.', 'skillsUsed': ['Python', 'Django', 'PostgreSQL']}",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.079217Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "education[0]",
+      "source": "tests/fixtures/sample_ats.json",
+      "raw_value": "{'institution': 'Indian Institute of Technology', 'degree': 'Bachelor of Technology', 'fieldOfStudy': 'Computer Science', 'startDate': '2014', 'endDate': '2018', 'gpa': 8.7}",
+      "confidence": 0.95,
+      "extracted_at": "2026-06-30T09:49:45.079280Z",
+      "normalised": false,
+      "notes": "method=json_key_mapping"
+    },
+    {
+      "field_path": "emails[0]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "alice.wonderland@example.com",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.171699Z",
+      "normalised": false,
+      "notes": "method=regex"
+    },
+    {
+      "field_path": "phones[0]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "+1 (415) 555-0199",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.171714Z",
+      "normalised": false,
+      "notes": "method=regex"
+    },
+    {
+      "field_path": "phones[1]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "(415) 555-0199",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.171716Z",
+      "normalised": false,
+      "notes": "method=regex"
+    },
+    {
+      "field_path": "full_name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Alice Wonderland",
+      "confidence": 0.65,
+      "extracted_at": "2026-06-30T09:49:45.171857Z",
+      "normalised": false,
+      "notes": "method=header_heuristic"
+    },
+    {
+      "field_path": "skills[0].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Python",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181866Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[1].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "JavaScript",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181873Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[2].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "TypeScript",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181875Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[3].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "React",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181877Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[4].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Node.js",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181879Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[5].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Django",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181881Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[6].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "FastAPI",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181883Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[7].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "PostgreSQL",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181885Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[8].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Redis",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181887Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[9].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Docker",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181891Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[10].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "AWS",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181893Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[11].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Git",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181895Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "skills[12].name",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "REST",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181896Z",
+      "normalised": false,
+      "notes": "method=taxonomy_match"
+    },
+    {
+      "field_path": "experience[0]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Senior Software Engineer",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181948Z",
+      "normalised": false,
+      "notes": "method=section_keyword"
+    },
+    {
+      "field_path": "experience[1]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Software Engineer",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.181950Z",
+      "normalised": false,
+      "notes": "method=section_keyword"
+    },
+    {
+      "field_path": "education[0]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "Indian Institute of Technology Bombay",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.182007Z",
+      "normalised": false,
+      "notes": "method=section_keyword"
+    },
+    {
+      "field_path": "education[1]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": null,
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.182009Z",
+      "normalised": false,
+      "notes": "method=section_keyword"
+    },
+    {
+      "field_path": "links[0]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "https://linkedin.com/in/alicewonderland",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.182024Z",
+      "normalised": false,
+      "notes": "method=regex_linkedin"
+    },
+    {
+      "field_path": "links[1]",
+      "source": "tests/fixtures/sample_resume.pdf",
+      "raw_value": "https://github.com/alicewonder",
+      "confidence": 0.75,
+      "extracted_at": "2026-06-30T09:49:45.182028Z",
+      "normalised": false,
+      "notes": "method=regex_github"
+    }
+  ]
+}

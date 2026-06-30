@@ -1,0 +1,16 @@
+{
+  "candidateName": "John Doe",
+  "primaryEmail": "john@example.com",
+  "skills": [
+    "Python",
+    "Java"
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "TechCorp",
+      "startDate": "2020",
+      "endDate": "2022"
+    }
+  ]
+}

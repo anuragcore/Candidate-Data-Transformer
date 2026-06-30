@@ -1,0 +1,11 @@
+{
+  "candidateName": "Alice Wonderland",
+  "primaryEmail": "alice@gmail.com",
+  "mobile": "+91 9876543210",
+  "location": "Bangalore",
+  "skills": [
+    "Python",
+    "React",
+    "Docker"
+  ]
+}

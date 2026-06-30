@@ -1,0 +1,26 @@
+{
+  "candidateName": "Alice Wonderland",
+  "headline": "Software Engineer",
+  "primaryEmail": "alice.wonder@gmail.com",
+  "mobile": "+91 9876543210",
+  "location": "Wonderland City",
+  "skills": [
+    "Python",
+    "Java",
+    "React"
+  ],
+  "experience": [
+    {
+      "company": "Acme Corp",
+      "title": "Senior Developer",
+      "startDate": "2020-01"
+    }
+  ],
+  "education": [
+    {
+      "institution": "IIT",
+      "degree": "Bachelor of Technology",
+      "endDate": "2018-05"
+    }
+  ]
+}
