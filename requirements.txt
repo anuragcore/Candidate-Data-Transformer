@@ -7,7 +7,7 @@ pydantic[email]>=2.7,<3.0   # Data validation and settings management (v2 API)
 pdfplumber>=0.11             # PDF text extraction (ResumAdapter)
 
 # Phase 3+ (uncomment as features are implemented)
-# phonenumbers>=8.13         # E.164 phone number normalisation
+phonenumbers>=8.13         # E.164 phone number normalisation
 # PyYAML>=6.0                # YAML config file loading
 # httpx>=0.27                # Async HTTP client for ATS API sources
 
