@@ -35,17 +35,21 @@ st.markdown("""
 <div class="pipeline-container">
     <div class="pipe-node" style="background: #2b5c8f; color: white;">ATS + Resume</div>
     <div class="pipe-arrow">&#10142;</div>
-    <div class="pipe-node" style="background: #207a5d; color: white;">Extract</div>
+    <div class="pipe-node" style="background: #207a5d; color: white;">Adapters</div>
     <div class="pipe-arrow">&#10142;</div>
-    <div class="pipe-node" style="background: #a36b14; color: white;">Normalize</div>
+    <div class="pipe-node" style="background: #13819e; color: white;">Canonical Profile</div>
     <div class="pipe-arrow">&#10142;</div>
-    <div class="pipe-node" style="background: #8b2b2b; color: white;">Merge</div>
+    <div class="pipe-node" style="background: #a36b14; color: white;">Normalization</div>
     <div class="pipe-arrow">&#10142;</div>
-    <div class="pipe-node" style="background: #5d2b8b; color: white;">Confidence</div>
+    <div class="pipe-node" style="background: #8b2b2b; color: white;">Merge & Conflict Resolution</div>
     <div class="pipe-arrow">&#10142;</div>
-    <div class="pipe-node" style="background: #a39514; color: white;">Project</div>
+    <div class="pipe-node" style="background: #5d2b8b; color: white;">Provenance & Confidence</div>
     <div class="pipe-arrow">&#10142;</div>
-    <div class="pipe-node" style="background: #2b8f3a; color: white;">Canonical Output</div>
+    <div class="pipe-node" style="background: #a39514; color: white;">Projection</div>
+    <div class="pipe-arrow">&#10142;</div>
+    <div class="pipe-node" style="background: #b35a1f; color: white;">Validation</div>
+    <div class="pipe-arrow">&#10142;</div>
+    <div class="pipe-node" style="background: #2b8f3a; color: white;">Final Output</div>
 </div>
 """, unsafe_allow_html=True)
 
