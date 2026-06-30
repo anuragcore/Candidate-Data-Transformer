@@ -1,6 +1,6 @@
 # Multi-Source Candidate Data Transformer
 
-**Live Demo:** [https://candidate-data-transformer.streamlit.app/](https://candidate-data-transformer.streamlit.app/)
+**Live Demo:** [https://candidate-data-transformer-n9ahkjmob9b6r3srjm947g.streamlit.app/](https://candidate-data-transformer-n9ahkjmob9b6r3srjm947g.streamlit.app/)
 
 ## Project Overview
 This pipeline ingests candidate data from heterogeneous sources (structured ATS JSON and unstructured résumé PDFs) and fuses them into a single, authoritative Canonical Candidate Profile. It performs deterministic extraction, data normalization, and conflict resolution via a dedicated Merge Engine. Every field is tracked with precise provenance and scored by a Confidence Engine, before being passed to a runtime Projection Engine that enables configurable output shapes without altering internal architecture.
