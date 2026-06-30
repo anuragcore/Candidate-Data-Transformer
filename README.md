@@ -1,42 +1,104 @@
 # Multi-Source Candidate Data Transformer
 
-> **Live Demo:** [https://candidate-data-transformer.streamlit.app/](https://candidate-data-transformer.streamlit.app/)
+**Live Demo:** [https://candidate-data-transformer.streamlit.app/](https://candidate-data-transformer.streamlit.app/)
 
-The Multi-Source Candidate Data Transformer ingests candidate data from heterogeneous sources (structured ATS JSON + unstructured résumé PDFs), normalizes it, and fuses it into a single, authoritative Canonical Candidate Profile.
+## Project Overview
+This pipeline ingests candidate data from heterogeneous sources (structured ATS JSON and unstructured résumé PDFs) and fuses them into a single, authoritative Canonical Candidate Profile. It performs deterministic extraction, data normalization, and conflict resolution via a dedicated Merge Engine. Every field is tracked with precise provenance and scored by a Confidence Engine, before being passed to a runtime Projection Engine that enables configurable output shapes without altering internal architecture.
 
 ## Architecture
 
-ATS JSON + Resume PDF ➔ Adapters ➔ Canonical Profile ➔ Normalization ➔ Merge & Conflict Resolution ➔ Provenance & Confidence ➔ Projection ➔ Validation ➔ Final Output
-
-## Quick Start (CLI / Streamlit)
-
-**Prerequisites:** Python 3.11+
-
-```bash
-git clone https://github.com/anuragcore/Candidate-Data-Transformer.git
-cd Candidate-Data-Transformer
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-**Run the UI (Recommended):**
-```bash
-streamlit run app.py
-```
-
-## Running Tests
-The project contains 208 tests with 100% core coverage.
-```bash
-pytest tests/ -v
+```text
+ATS JSON          Resume PDF
+    |                  |
+    v                  v
+ ATS Adapter     Resume Adapter
+          \      /
+           \    /
+            v  v
+     Canonical Profile
+             |
+             v
+ Normalize -> Merge -> Confidence
+             |
+             v
+        Projection
+             |
+             v
+        Final JSON
 ```
 
 ## Sample Inputs
-Use the provided `samples/` directory to evaluate the system's behavior:
-- **Candidate A (`candidate_a.json`)**: Baseline agreement scenario. Expect high confidence scores (1.00) due to source corroboration.
-- **Candidate B (`candidate_b.json`)**: Source conflict scenario. The engine applies deterministic conflict resolution and accurately downgrades confidence (0.70).
-- **Candidate C (`candidate_c.json`)**: Malformed/missing data scenario. The pipeline gracefully degrades without crashing.
+The pipeline accepts raw inputs. For complete examples, see the `samples/` directory.
 
-## Assumptions & Limitations
-- **Assumptions**: ATS JSON files follow a semi-structured key-value format. Résumé PDFs have parseable text layers (not scanned images).
-- **Limitations**: The current deterministic parser does not extract highly nested, unstructured multi-page project arrays perfectly without an ML/NLP layer. We explicitly chose to omit fuzzy guessing in favor of strict "wrong-but-confident is worse than honestly-empty" constraints.
+**Example ATS JSON snippet:**
+```json
+{
+  "candidateName": "Anurag",
+  "primaryEmail": "anurag612@gmail.com",
+  "mobile": "+916206478201"
+}
+```
+
+## Produced Canonical Output
+The system generates a rich canonical representation containing merged data, confidence scores, and provenance.
+
+**Example Output snippet:**
+```json
+{
+  "full_name": "Anurag",
+  "emails": ["anurag612@gmail.com"],
+  "phones": ["+916206478201"],
+  "overall_confidence": 0.84
+}
+```
+
+## Projection Example
+The output can be dynamically reshaped at runtime using a JSON configuration.
+
+**Projection Config:**
+```json
+{
+  "fields": [
+    {
+      "path": "candidate_name",
+      "from": "full_name"
+    }
+  ]
+}
+```
+
+**Projected Output:**
+```json
+{
+  "candidate_name": "Anurag"
+}
+```
+
+## How to Run
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch the interactive UI
+streamlit run app.py
+```
+
+## How to Test
+
+```bash
+# Run the complete automated test suite
+pytest
+```
+
+## Assumptions
+- The candidate's name appears near the top of the resume.
+- The resume follows common formatting conventions (standard headings for Experience, Education, etc.).
+- Skills are mapped through a predefined local taxonomy.
+- Missing values are explicitly returned as `null` rather than invented/guessed.
+
+## Known Limitations
+- Extraction relies on deterministic heuristics and regex.
+- No OCR support for scanned images (requires parseable PDF text).
+- No fuzzy entity resolution (relies on exact matches or taxonomy).
+- No AI/LLM-based extraction components.
