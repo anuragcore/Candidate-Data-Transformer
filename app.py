@@ -21,21 +21,31 @@ st.title("Multi-Source Candidate Data Transformer")
 
 # Pipeline Summary Card
 st.markdown("""
-<div style="padding: 1rem; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 1rem; text-align: center; background-color: #f9f9f9; color: #333;">
-    <strong>Pipeline</strong><br><br>
-    ATS JSON + Resume PDF<br>
-    &#8595;<br>
-    Extract<br>
-    &#8595;<br>
-    Normalize<br>
-    &#8595;<br>
-    Merge<br>
-    &#8595;<br>
-    Confidence<br>
-    &#8595;<br>
-    Project<br>
-    &#8595;<br>
-    Output
+<style>
+    .pipeline-container {
+        display: flex; justify-content: center; align-items: center; gap: 0.8rem; 
+        padding: 1.5rem; background: #1E1E1E; border-radius: 12px; margin-bottom: 2rem; 
+        border: 1px solid #333; flex-wrap: wrap; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .pipe-node {
+        padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.5px;
+    }
+    .pipe-arrow { color: #666; font-size: 1.2rem; font-weight: bold; }
+</style>
+<div class="pipeline-container">
+    <div class="pipe-node" style="background: #2b5c8f; color: white;">ATS + Resume</div>
+    <div class="pipe-arrow">&#10142;</div>
+    <div class="pipe-node" style="background: #207a5d; color: white;">Extract</div>
+    <div class="pipe-arrow">&#10142;</div>
+    <div class="pipe-node" style="background: #a36b14; color: white;">Normalize</div>
+    <div class="pipe-arrow">&#10142;</div>
+    <div class="pipe-node" style="background: #8b2b2b; color: white;">Merge</div>
+    <div class="pipe-arrow">&#10142;</div>
+    <div class="pipe-node" style="background: #5d2b8b; color: white;">Confidence</div>
+    <div class="pipe-arrow">&#10142;</div>
+    <div class="pipe-node" style="background: #a39514; color: white;">Project</div>
+    <div class="pipe-arrow">&#10142;</div>
+    <div class="pipe-node" style="background: #2b8f3a; color: white;">Canonical Output</div>
 </div>
 """, unsafe_allow_html=True)
 
