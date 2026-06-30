@@ -7,24 +7,59 @@ This pipeline ingests candidate data from heterogeneous sources (structured ATS 
 
 ## Architecture
 
-```text
-ATS JSON          Resume PDF
-    |                  |
-    v                  v
- ATS Adapter     Resume Adapter
-          \      /
-           \    /
-            v  v
-     Canonical Profile
-             |
-             v
- Normalize -> Merge -> Confidence
-             |
-             v
-        Projection
-             |
-             v
-        Final JSON
+```mermaid
+graph TD
+    %% Styling Definitions
+    classDef source fill:#f9f9f9,stroke:#333,stroke-width:1px,color:#333,font-weight:bold
+    classDef adapter fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1,font-weight:bold
+    classDef model fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20,font-weight:bold
+    classDef processor fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#e65100,font-weight:bold
+    classDef output fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#4a148c,font-weight:bold
+
+    %% Inputs
+    ATS["ATS JSON<br/><span style='font-weight:normal;font-size:12px'>(Structured Source)</span>"]:::source
+    RESUME["Resume PDF<br/><span style='font-weight:normal;font-size:12px'>(Unstructured Source)</span>"]:::source
+
+    %% Adapters
+    subgraph S1 [Extraction]
+        ADAPT_ATS["ATS Adapter"]:::adapter
+        ADAPT_RES["Resume Adapter"]:::adapter
+    end
+
+    %% Flow from sources
+    ATS --> ADAPT_ATS
+    RESUME --> ADAPT_RES
+
+    %% Canonical Model
+    CANONICAL["Canonical Candidate Profile<br/><span style='font-weight:normal;font-size:12px'>(Single Source of Truth)</span>"]:::model
+    
+    ADAPT_ATS --> CANONICAL
+    ADAPT_RES --> CANONICAL
+
+    %% Processors
+    subgraph S2 [Transformation Pipeline]
+        direction TB
+        NORM["Normalization Layer<br/><div style='text-align:left;font-weight:normal;font-size:12px;margin-top:4px'>• Emails & Phones (E.164)<br/>• Skills Canonicalization<br/>• Location Normalization</div>"]:::processor
+        
+        MERGE["Merge Engine<br/><div style='text-align:left;font-weight:normal;font-size:12px;margin-top:4px'>• Conflict Resolution<br/>• Deduplication</div>"]:::processor
+        
+        CONF["Confidence Engine<br/><div style='text-align:left;font-weight:normal;font-size:12px;margin-top:4px'>• Source Agreement<br/>• Conflict Penalties</div>"]:::processor
+        
+        PROJ["Projection Layer<br/><div style='text-align:left;font-weight:normal;font-size:12px;margin-top:4px'>• Field Selection / Remapping<br/>• Missing Value Handling<br/>(Runtime Config)</div>"]:::processor
+        
+        VALID["Schema Validation<br/><div style='text-align:left;font-weight:normal;font-size:12px;margin-top:4px'>• Validate Projected Output</div>"]:::processor
+    end
+
+    CANONICAL --> NORM
+    NORM --> MERGE
+    MERGE --> CONF
+    CONF --> PROJ
+    PROJ --> VALID
+
+    %% Output
+    FINAL["Final Output JSON"]:::output
+
+    VALID --> FINAL
 ```
 
 ## Sample Inputs
